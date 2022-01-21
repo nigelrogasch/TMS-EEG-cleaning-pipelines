@@ -32,6 +32,12 @@ To generate TEPs and global mean field amplitudes used in the figure scripts, ru
 
 Variants on the above pipelines used for different comparisons in the paper are indicated in the script names.
 
+## Dependencies
 
+The scripts require the following toolboxes:
 
+[EEGLAB](https://sccn.ucsd.edu/eeglab/index.php)
 
+[TESA](https://nigelrogasch.github.io/TESA/) (Needs to be added to the plugins folder in EEGLAB)
+
+[FieldTrip](https://www.fieldtriptoolbox.org/)
