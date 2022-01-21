@@ -14,18 +14,18 @@ The data provided are the output from `pipeline_step1.m` and are epoched around 
 
 To run the main pipelines compared in the paper, sequentially run through the pipeline scripts as below. Note that file paths to data and other toolboxes will need to be personalised:
 
-`pipeline_step1.m` (note that the output data from this script is provided above)
+- `pipeline_step1.m` (note that the output data from this script is provided above)
 
-`pipeline_step2.m`
+- `pipeline_step2.m`
 
-`pipeline_step3_FastICA_1.m` and 
+- `pipeline_step3_FastICA_1.m` *and* 
 `pipeline_step3_FastICA_2.m`
 **or**
 `pipeline_step3_SOUND.m`
 **or**
 `pipeline_step3_FrecheModel.m`
 
-`pipeline_step4.m`
+- `pipeline_step4.m`
 
 To generate TEPs and global mean field amplitudes used in the figure scripts, run:
 `save_out_tep_gmfa.m`
@@ -36,8 +36,8 @@ Variants on the above pipelines used for different comparisons in the paper are 
 
 The scripts require the following toolboxes:
 
-[EEGLAB](https://sccn.ucsd.edu/eeglab/index.php)
+- [EEGLAB](https://sccn.ucsd.edu/eeglab/index.php)
 
-[TESA](https://nigelrogasch.github.io/TESA/) (Needs to be added to the plugins folder in EEGLAB)
+- [TESA](https://nigelrogasch.github.io/TESA/) (needs to be added to the plugins folder in EEGLAB)
 
-[FieldTrip](https://www.fieldtriptoolbox.org/)
+- [FieldTrip](https://www.fieldtriptoolbox.org/)
