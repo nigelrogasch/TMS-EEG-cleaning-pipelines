@@ -6,7 +6,7 @@ Rogasch NC, Biabani M, & Mutanen TP. (2021) [Designing and comparing cleaning pi
 
 ## Data
 
-TMS-EEG data used in the paper are available from this figshare repository.
+TMS-EEG data used in the paper are available from this [data repository](https://doi.org/10.26180/18805994.v4).
 
 The data provided are the output from `pipeline_step1.m` and are epoched around the TMS pulse (-1000 to 1000 ms) and baseline corrected (-500 to -10 ms). Unused channels have been removed.
 
