@@ -5,6 +5,7 @@
 
 % Raw TMS-EEG data required for this script are available on request from
 % the authors. Note that output data from this script are available at:
+% https://doi.org/10.26180/18805994.v4
 
 % Author: Mana Biabani, University of Adelaide, 2021
 
