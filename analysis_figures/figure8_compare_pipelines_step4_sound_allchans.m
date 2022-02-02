@@ -1,11 +1,3 @@
-% ##### PLOT FIGURE 8 #####
-
-% This script runs all of the analysis and generates figure 8 from the 
-% manuscript which compares the TEP outcomes from the SOUND pipelines using
-% either manual noisy channel removal or automated correction using SOUND.
-
-% Author: Nigel Rogasch, University of Adelaide, 2021
-
 clear; close all; clc;
 
 conditionName = {'S v Sa'};
@@ -19,6 +11,7 @@ stepNo = 'step4';
 
 % Condition name
 condName = {'SOUND','SOUND_allchans'};
+condNameTxt = {'SOUND','SOUND all'};
 
 % Data path
 pathIn = '/projects/kg98/Mana/decay/highIntensity_separateBlocks_withTMSPulse/';
@@ -109,7 +102,7 @@ gc1 = ones(1,length(ti))*0.6;
 gc1(loggc1==0) = NaN;
 plot(timec,gc1,'color',c(4,:),'linewidth',2);
 
-lgd1 = legend([pg.h1,pg.h2],condName,'box','off','location','southeast','fontsize',8);
+lgd1 = legend([pg.h1,pg.h2],condNameTxt,'box','off','location','southeast','fontsize',8);
 lgd1.Position = [0.36,0.63,0.1,0.05];
 
 % Plot correlations
@@ -234,7 +227,12 @@ for sitex = 1:length(condition)
         end
         
         if plotx == 1
-            text(-1.35,0,condName{sitex},'fontsize',11);
+            if sitex == 2
+                str={'SOUND','all'};
+                text(-1.0,0,str,'fontsize',11,'horizontalalignment','center');
+            else
+                text(-1.35,0,condName{sitex},'fontsize',11);
+            end
         end
         
         if sitex ==1 && plotx ==1
@@ -254,5 +252,10 @@ for sitex = 1:length(condition)
     end
 end
 
-saveas(fig,[pathOut,loadName,'_',stepNo,'.png']);
-saveas(fig,[pathOut,'figure8.png']);
+% saveas(fig,[pathOut,loadName,'_',stepNo,'.png']);
+% saveas(fig,[pathOut,'figure8.png']);
+set(gcf,'paperpositionmode','auto');
+print([pathOut,'figure8.png'],'-dpng');
+print([pathOut,'figure8.tiff'],'-dtiff','-r500');
+
+
